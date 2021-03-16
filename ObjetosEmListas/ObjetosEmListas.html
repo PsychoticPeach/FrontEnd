@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h3>Lista de Tarefas</h3>
+        <input type="text" placeholder="Insira aqui a nova tarefa" v-model="novaTarefa" @keyup.enter="insereTarefa()">
+        <button @click="insereTarefa()">Inserir</button>
+        <ul>
+            <li v-for="x in tarefas" :class="{realizada: x.realizada, prioritario:x.prioritario}" @click="realizaTarefa(x)">{{x.nome}}</li>
+        </ul>
+    </div>
+    <style>
+        .realizada {
+            text-decoration: line-through;
+            color: gray;
+        }
+        
+        .prioritario {
+            color: red;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                novaTarefa: "",
+                tarefas: [{
+                    nome: "Exercício de HTML e CSS",
+                    prioritario: false,
+                    realizada: false
+                }, {
+                    nome: "Exercício de JavaScript",
+                    prioritario: false,
+                    realizada: false,
+                }, {
+                    nome: "Exercício de VueJS",
+                    prioritario: false,
+                    realizada: false
+                }, {
+                    nome: "Exercício de Angular",
+                    prioritario: false,
+                    realizada: false
+                }, ]
+            },
+            methods: {
+                realizaTarefa: function(x) {
+                    x.realizada = !x.realizada
+                },
+                insereTarefa: function() {
+                    if (!!this.novaTarefa) {
+                        this.tarefas.push({
+                                nome: this.novaTarefa,
+                                prioritario: false,
+                                realizada: false
+                            }),
+                            this.novaTarefa = ""
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
