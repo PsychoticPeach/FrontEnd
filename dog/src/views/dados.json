@@ -1,0 +1,31 @@
+[{
+        "nome": "Akita",
+        "preco": 800,
+        "foto": "https://images.dog.ceo/breeds/akita/512px-Ainu-Dog.jpg"
+    },
+    {
+        "nome": "Husky",
+        "preco": 800,
+        "foto": "https://images.dog.ceo/breeds/husky/20180901_150234.jpg"
+    },
+    {
+        "nome": "Beagle",
+        "preco": 800,
+        "foto": "https://images.dog.ceo/breeds/beagle/n02088364_10585.jpg"
+    },
+    {
+        "nome": "Bulldog",
+        "preco": 800,
+        "foto": "https://images.dog.ceo/breeds/bulldog-boston/n02096585_10452.jpg"
+    },
+    {
+        "nome": "Australian",
+        "preco": 800,
+        "foto": "https://images.dog.ceo/breeds/australian-shepherd/pepper.jpg"
+    },
+    {
+        "nome": "Bulldog",
+        "preco": 800,
+        "foto": "https://images.dog.ceo/breeds/bulldog-boston/n02096585_10452.jpg"
+    }
+]
